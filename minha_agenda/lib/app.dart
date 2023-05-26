@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:minha_agenda/routes/routes_generate.dart';
 
 import 'pages/home.dart';
 
@@ -8,16 +9,19 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    
+    var myHome = const MyHomePage(title: 'Flutter Home Page Demonstração');
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',//titulo
       theme: ThemeData(//tema do app
         primarySwatch: Colors.blue,
-        colorScheme: ColorScheme.fromSeed(seedColor:Colors.pink)
+        colorScheme: ColorScheme.fromSeed(seedColor:Color.fromARGB(255, 167, 168, 207))
 
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: '1'),
+      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: RoutesGenerator.homePage,
+      onGenerateRoute: RoutesGenerator.generate,
     );
   }
 }
