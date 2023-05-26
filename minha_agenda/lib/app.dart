@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    var myHome = const MyHomePage(title: 'Flutter Home Page Demonstração');
+    //var myHome = const MyHomePage(userName: 'Flutter Home Page Demonstração');
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',//titulo
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor:Color.fromARGB(255, 167, 168, 207))
 
       ),
-      home: const MyHomePage(title: '1'),
+      //home: const MyHomePage(userName: 'Cleyton Silva'),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
       initialRoute: RoutesGenerator.homePage,
       onGenerateRoute: RoutesGenerator.generate,

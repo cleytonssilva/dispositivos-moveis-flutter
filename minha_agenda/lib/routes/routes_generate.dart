@@ -15,7 +15,7 @@ class RoutesGenerator{
     switch(settings.name){
       case homePage:
         return MaterialPageRoute(
-          builder: (_) => const MyHomePage(title: 'My Home'),);
+          builder: (_) => const MyHomePage(userName: 'Cleyton Silva'),);
            
       case addPage:
         return _goPage(const CadastroClique());
