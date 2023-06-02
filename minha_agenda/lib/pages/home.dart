@@ -1,8 +1,13 @@
-import 'dart:ui';
+//import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:minha_agenda/components/subtitle_widget.dart';
+import 'package:minha_agenda/components/title_widget.dart';
+//
 import 'package:minha_agenda/shared/constants.dart';
+import 'package:minha_agenda/shared/styles.dart';
 
+import '../components/tasks/list.dart';
 import '../routes/routes_generate.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -19,30 +24,75 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  //int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  //void _incrementCounter() {
+   // /setState(() {
+     // _counter++;
+   // });
+  //}
 
-//class _MyHomePageState extends State<MyHomePage>{
   @override
   Widget build(BuildContext context) {
     //var mediaQuery = MediaQuery.of(context)
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: AppStyle.primaryColor,
+              ),
+              child: SizedBox.shrink(),
+            ),
+            
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Home'),
+              onTap: () {
+                Navigator.of(context).pushNamed(RoutesGenerator.homePage);
+              },
+            ),
+            
+            ListTile(
+              leading: const Icon(Icons.category),
+              title: const Text('Categorias'),
+              onTap: () {
+                Navigator.of(context).pushNamed(RoutesGenerator.categoryPage);
+              },
+            ),
+            
+            ListTile(
+              leading: const Icon(Icons.calendar_month),
+              title: const Text('Calendario'),
+              onTap: () {
+                Navigator.of(context).pushNamed(RoutesGenerator.calendarPage);
+              },
+            ),
+            
+            ListTile(
+              leading: const Icon(Icons.toc_outlined),
+              title: const Text('Sobre'),
+              onTap: () {
+                Navigator.of(context).pushNamed(RoutesGenerator.aboutPage);
+              },
+            ),
+          ],
+        ),
+      ),
+      
       appBar: AppBar(
-        leading: const Text(''),
+        elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.primary,
         title: Center(
           child: Image.network(
             'https://minhaagenda.apicesistemas.com.br/static/media/Logo.63d31e1c.png',
             width: 120,
           ),
-          //title: Image.network('https://minhaagenda.apicesistemas.com.br/static/media/Logo.63d31e1c.png'),
-        ),
       ),
+      ),
+      
       body: Align(
         alignment: Alignment.topLeft,
         child: Padding(
@@ -51,15 +101,21 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(AppConstants.welcome),
-              Text(
-                widget.name,
-                style: const TextStyle(
-                  color: Colors.blue,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-            ],
+              const SubtitleDefault(title: AppConstants.welcome),
+              TitleDefault(title: widget.name),
+              const Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(top: 16.0),
+                  child: ListTasks(),
+                  ),
+                  ),
+
+              //const Text(AppConstants.welcome),
+              //Text(widget.name,
+                //style: const TextStyle(
+                //color: Colors.blue,
+                //fontWeight: FontWeight.bold
+            ], //+ List.generate(length, (index) => null)
           ),
         ),
         //const Center(
@@ -83,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print('caminho para home : ${RoutesGenerator.homePage}');
+          //print('caminho para home : ${RoutesGenerator.homePage}');
           Navigator.of(context).pushNamed(RoutesGenerator.addPage);
         },
         tooltip: 'Increment',
