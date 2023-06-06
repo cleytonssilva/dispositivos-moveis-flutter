@@ -18,7 +18,6 @@ class RoutesGenerator {
   static Route generate(RouteSettings settings) {
     switch (settings.name) {
       case homePage:
-        print('Aq');
         return MaterialPageRoute(
           builder: (_) => const MyHomePage(userName: 'Cleyton Silva'),
         );

@@ -1,6 +1,7 @@
 //import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:minha_agenda/components/image_header_default.dart';
 import 'package:minha_agenda/components/subtitle_widget.dart';
 import 'package:minha_agenda/components/title_widget.dart';
 //
@@ -42,8 +43,14 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: AppStyle.primaryColor,
+              color: AppStyle.primaryColor,
+              image: DecorationImage(
+                image: NetworkImage('https://picsum.photos/seed/picsum/400/400'),
+                fit: BoxFit.cover,
+                ),
+
               ),
+              
               child: SizedBox.shrink(),
             ),
             
@@ -85,14 +92,13 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Theme.of(context).colorScheme.primary,
-        title: Center(
-          child: Image.network(
-            'https://minhaagenda.apicesistemas.com.br/static/media/Logo.63d31e1c.png',
-            width: 120,
+        title: const ImageHeaderDefault(),
+        //Center(
+          //child: Image.network(
+            //'https://minhaagenda.apicesistemas.com.br/static/media/Logo.63d31e1c.png',
+           // width: 120,
           ),
-      ),
-      ),
-      
+          
       body: Align(
         alignment: Alignment.topLeft,
         child: Padding(
