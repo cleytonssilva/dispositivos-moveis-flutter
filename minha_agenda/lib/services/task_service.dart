@@ -1,6 +1,6 @@
 import 'package:minha_agenda/services/category_service.dart';
 
-import '../models/category_model.dart';
+
 import '../models/task_model.dart';
 
 class TaskService {

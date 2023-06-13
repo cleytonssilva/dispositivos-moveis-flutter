@@ -1,4 +1,4 @@
-import 'package:minha_agenda/services/task_service.dart';
+
 import 'package:minha_agenda/services/category_service.dart';
 
 class CategoryController {

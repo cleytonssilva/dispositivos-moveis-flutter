@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SubtitleDefault(title: AppConstants.welcome),
+              SubtitleDefault(title: AppConstants.welcome),
               TitleDefault(title: widget.name),
               const Expanded(
                 child: Padding(

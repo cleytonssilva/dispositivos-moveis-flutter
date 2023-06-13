@@ -6,7 +6,7 @@ class SubtitleDefault extends StatelessWidget {
   final String _title;
   final double? _fontSize;
  
-  const SubtitleDefault({
+  SubtitleDefault({
     required String title,
     double? fontSize,
       

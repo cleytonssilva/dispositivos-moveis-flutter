@@ -3,6 +3,7 @@ import 'package:minha_agenda/components/image_header_default.dart';
 import 'package:minha_agenda/components/title_widget.dart';
 import 'package:minha_agenda/controllers/category_controller.dart';
 import 'package:minha_agenda/services/category_service.dart';
+
 import 'package:minha_agenda/shared/styles.dart';
 
 class CategoryPage extends StatefulWidget {
@@ -98,7 +99,9 @@ class _CategoryPage extends State<CategoryPage> {
             ),
           ],
         ),
-      ),
-    );
+        
+    ),
+      );
+    
   }
 }
