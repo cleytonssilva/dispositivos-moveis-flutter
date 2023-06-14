@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
-import 'package:minha_agenda/pages/cadastro_clique.dart';
-import 'package:minha_agenda/pages/home.dart';
+import '../modules/category/pages/category.dart';
+import '../modules/home/pages/cadastro_clique.dart';
+import '../modules/home/pages/home.dart';
 import '../shared/constants.dart';
-import 'package:minha_agenda/pages/about.dart';
-import 'package:minha_agenda/pages/calendar.dart';
-import 'package:minha_agenda/pages/category.dart';
+import '../modules/home/pages/about.dart';
+import '../modules/home/pages/calendar.dart';
 
 class RoutesGenerator {
   static const homePage = '/';
@@ -28,6 +27,7 @@ class RoutesGenerator {
         return _goPage(const AboutPage());
 
       case categoryPage:
+        //print('Marcos');
         return _goPage(const CategoryPage());
 
       case calendarPage:

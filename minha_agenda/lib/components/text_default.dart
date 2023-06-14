@@ -8,7 +8,7 @@ class TextDefault extends StatelessWidget {
   final FontWeight? _fontWeight;
 
 
-  TextDefault({
+  const TextDefault({
     required String title,
     required Color color,
     double? fontSize,

@@ -1,5 +1,4 @@
-import 'package:minha_agenda/services/category_service.dart';
-
+import '../../category/services/category_service.dart';
 
 import '../models/task_model.dart';
 

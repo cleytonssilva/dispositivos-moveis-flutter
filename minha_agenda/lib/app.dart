@@ -9,14 +9,16 @@ class MyApp extends StatelessWidget {
     //var myHome = const MyHomePage(userName: 'Flutter Home Page Demonstração');
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo', //titulo
+      //title: 'Flutter Demo', //titulo
       theme: ThemeData(
           //tema do app
           primarySwatch: Colors.blue,
           colorScheme: ColorScheme.fromSeed(
               seedColor: const Color.fromARGB(255, 42, 42, 83))),
       //home: const MyH comePage(userName: 'Cleyton Silva'),
-      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(
+      //   userName: 'Cri',
+      // ),
       initialRoute: RoutesGenerator.homePage,
       onGenerateRoute: RoutesGenerator.generate,
     );

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:minha_agenda/components/subtitle_widget.dart';
-import 'package:minha_agenda/components/title_widget.dart';
-import 'package:minha_agenda/controllers/home_controller.dart';
-import 'package:minha_agenda/models/task_model.dart';
-import 'package:minha_agenda/services/category_service.dart';
-import 'package:minha_agenda/services/task_service.dart';
-import 'package:minha_agenda/shared/styles.dart';
+import '../../../components/title_widget.dart';
+import '../../home/controllers/home_controller.dart';
+import '../models/task_model.dart';
+import '../../category/services/category_service.dart';
+import '../services/task_service.dart';
+import '../../../shared/styles.dart';
 
 
-import '../../controllers/home_controller.dart';
-import '../../services/task_service.dart';
-import '../../shared/constants.dart';
+import '../../home/controllers/home_controller.dart';
+import '.././services/task_service.dart';
+import '../../../shared/constants.dart';
 
 
 

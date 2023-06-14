@@ -8,8 +8,8 @@ import 'package:minha_agenda/components/title_widget.dart';
 import 'package:minha_agenda/shared/constants.dart';
 import 'package:minha_agenda/shared/styles.dart';
 
-import '../components/tasks/list.dart';
-import '../routes/routes_generate.dart';
+import '../../task/components/list.dart';
+import '../../../routes/routes_generate.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required String userName})
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             
             ListTile(
               leading: const Icon(Icons.home),
-              title: const Text('Home'),
+              title: const Text(AppConstants.home),
               onTap: () {
                 Navigator.of(context).pushNamed(RoutesGenerator.homePage);
               },
@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
             
             ListTile(
               leading: const Icon(Icons.category),
-              title: const Text('Categorias'),
+              title: const Text(AppConstants.category),
               onTap: () {
                 Navigator.of(context).pushNamed(RoutesGenerator.categoryPage);
               },
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
             
             ListTile(
               leading: const Icon(Icons.calendar_month),
-              title: const Text('Calendario'),
+              title: const Text(AppConstants.calendar),
               onTap: () {
                 Navigator.of(context).pushNamed(RoutesGenerator.calendarPage);
               },
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
             
             ListTile(
               leading: const Icon(Icons.toc_outlined),
-              title: const Text('Sobre'),
+              title: const Text(AppConstants.about),
               onTap: () {
                 Navigator.of(context).pushNamed(RoutesGenerator.aboutPage);
               },
@@ -148,7 +148,8 @@ class _MyHomePageState extends State<MyHomePage> {
           //print('caminho para home : ${RoutesGenerator.homePage}');
           Navigator.of(context).pushNamed(RoutesGenerator.addPage);
         },
-        tooltip: 'Increment',
+        tooltip: AppConstants.newPage,
+        //'Increment',
         child: const Icon(Icons.add),
         //child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.

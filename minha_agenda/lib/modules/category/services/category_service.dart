@@ -1,8 +1,8 @@
 
-import 'package:minha_agenda/models/category_model.dart';
+import '../models/category_model.dart';
 
 class CategoryService{
-  List<Category> getCategories(){
+  List<Category> getCategories()  {
     return[
       Category(name: 'Imposto', color: 0xFFF45757),
       Category(name: 'Entrada', color: 0xFF5cc6ba),
